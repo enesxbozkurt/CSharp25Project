@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GrandingSystemModelStoreContainer" CdmEntityContainer="GrandingSystemEntities">
+    <EntitySetMapping Name="Lessons">
+      <EntityTypeMapping TypeName="GrandingSystemModel.Lesson">
+        <MappingFragment StoreEntitySet="Lessons">
+          <ScalarProperty Name="StuId" ColumnName="StuId" />
+          <ScalarProperty Name="StuNumber" ColumnName="StuNumber" />
+          <ScalarProperty Name="StuName" ColumnName="StuName" />
+          <ScalarProperty Name="StuSurname" ColumnName="StuSurname" />
+          <ScalarProperty Name="StuE1" ColumnName="StuE1" />
+          <ScalarProperty Name="StuE2" ColumnName="StuE2" />
+          <ScalarProperty Name="StuE3" ColumnName="StuE3" />
+          <ScalarProperty Name="Average" ColumnName="Average" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="StuCitizenshipNumber" ColumnName="StuCitizenshipNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teachers">
+      <EntityTypeMapping TypeName="GrandingSystemModel.Teacher">
+        <MappingFragment StoreEntitySet="Teachers">
+          <ScalarProperty Name="TeachId" ColumnName="TeachId" />
+          <ScalarProperty Name="TeachName" ColumnName="TeachName" />
+          <ScalarProperty Name="TeachSurname" ColumnName="TeachSurname" />
+          <ScalarProperty Name="TeachUsername" ColumnName="TeachUsername" />
+          <ScalarProperty Name="TeachPassword" ColumnName="TeachPassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

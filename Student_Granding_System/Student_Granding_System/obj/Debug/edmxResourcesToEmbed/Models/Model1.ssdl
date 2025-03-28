@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GrandingSystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Lessons">
+    <Key>
+      <PropertyRef Name="StuId" />
+    </Key>
+    <Property Name="StuId" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StuNumber" Type="char" MaxLength="4" />
+    <Property Name="StuName" Type="nchar" MaxLength="15" />
+    <Property Name="StuSurname" Type="varchar" MaxLength="20" />
+    <Property Name="StuE1" Type="char" MaxLength="3" />
+    <Property Name="StuE2" Type="char" MaxLength="3" />
+    <Property Name="StuE3" Type="char" MaxLength="3" />
+    <Property Name="Average" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="StuCitizenshipNumber" Type="char" MaxLength="11" />
+  </EntityType>
+  <EntityType Name="Teachers">
+    <Key>
+      <PropertyRef Name="TeachId" />
+    </Key>
+    <Property Name="TeachId" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TeachName" Type="varchar" MaxLength="40" />
+    <Property Name="TeachSurname" Type="varchar" MaxLength="40" />
+    <Property Name="TeachUsername" Type="varchar" MaxLength="50" />
+    <Property Name="TeachPassword" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityContainer Name="GrandingSystemModelStoreContainer">
+    <EntitySet Name="Lessons" EntityType="Self.Lessons" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Teachers" EntityType="Self.Teachers" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
